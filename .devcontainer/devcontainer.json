@@ -15,9 +15,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [4200],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install",
-	"initializeCommand": "npm start",
+	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -27,10 +25,16 @@
 				"oderwat.indent-rainbow"
 			]
 		}
-	}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install",
+
+	// Use 'postStartCommand' to run commands after the container is started.
+	"postStartCommand": "ng serve --host 0.0.0.0 --disable-host-check",
 	
-	// Configure tool-specific properties.
-	// "customizations": {},
+	// Automatically stop the container when the VS Code window is closed.
+	"shutdownAction":"stopContainer"
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
