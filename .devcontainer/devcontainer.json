@@ -16,7 +16,17 @@
 	"forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install"
+	"postCreateCommand": "npm install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"johnpapa.angular-essentials",
+				"Angular.ng-template",
+				"esbenp.prettier-vscode",
+				"oderwat.indent-rainbow"
+			]
+		}
+	}
 	
 	// Configure tool-specific properties.
 	// "customizations": {},
