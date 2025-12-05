@@ -22,7 +22,7 @@
   "rules": {
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "no-console": "warn",
+    "no-console": ["warn", { "allow": ["error"] }],
     "no-unused-vars": "warn",
     "import/prefer-default-export": "off"
   },
