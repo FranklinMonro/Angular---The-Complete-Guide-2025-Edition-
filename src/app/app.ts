@@ -15,7 +15,7 @@ export class App {
 
   users = DUMMY_USERS;
 
-  selectedUserID = this.users[0].id;
+  selectedUserID?: string;
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserID);
