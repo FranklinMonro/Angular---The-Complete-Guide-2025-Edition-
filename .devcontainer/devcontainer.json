@@ -31,7 +31,7 @@
 	"postCreateCommand": "npm install",
 
 	// Use 'postStartCommand' to run commands after the container is started.
-	"postStartCommand": "ng serve --host 0.0.0.0",
+	"postStartCommand": "npm run dev",
 	
 	// Automatically stop the container when the VS Code window is closed.
 	"shutdownAction":"stopContainer"
