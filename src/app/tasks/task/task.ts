@@ -1,13 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { DateTime } from 'luxon';
-
-export interface TaskInterface {
-  id: string;
-  userId: string;
-  title: string;
-  summary: string;
-  dueDate: DateTime;
-}
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { type TaskInterface } from './task.model';
 
 @Component({
   selector: 'app-task',
@@ -17,4 +9,10 @@ export interface TaskInterface {
 })
 export class Task {
   @Input({ required: true }) task!: TaskInterface;
+
+  @Output() complete = new EventEmitter<string>();
+
+  onCompleteTask() {
+    this.complete.emit(this.task.id);
+  }
 }
