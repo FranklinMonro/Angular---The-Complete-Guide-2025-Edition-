@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { DateTime } from 'luxon';
-import { Task } from './task/task';
+import { TaskComponent } from './task/task';
 import { NewTask } from './new-task/new-task';
+import { TaskAdd } from './task/task.model';
 
 @Component({
   selector: 'app-tasks',
-  imports: [Task, NewTask],
+  imports: [TaskComponent, NewTask],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })
@@ -50,5 +51,18 @@ export class Tasks {
 
   onStartAddTask() {
     this.isAddingTask = true;
+  }
+
+  onCancelAddTask() {
+    this.isAddingTask = false;
+  }
+
+  onAddTask(task: TaskAdd) {
+    this.tasks.push({
+      id: DateTime.now().toISOTime().toString(),
+      userId: this.userId,
+      ...task,
+    });
+    this.isAddingTask = false;
   }
 }

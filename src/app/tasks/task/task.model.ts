@@ -1,9 +1,14 @@
 import { DateTime } from 'luxon';
 
-export interface TaskInterface {
+interface Task extends TaskAdd {
   id: string;
   userId: string;
+}
+
+interface TaskAdd {
   title: string;
   summary: string;
   dueDate: DateTime;
 }
+
+export type { Task, TaskAdd };
