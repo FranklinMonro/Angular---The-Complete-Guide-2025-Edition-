@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DateTime } from 'luxon';
-import { type TaskAdd } from '../task/task.model';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-new-task',
@@ -10,9 +10,9 @@ import { type TaskAdd } from '../task/task.model';
   styleUrl: './new-task.css',
 })
 export class NewTask {
-  @Output() cancelTask = new EventEmitter<void>();
+  @Input({ required: true }) userId!: string;
 
-  @Output() addTask = new EventEmitter<TaskAdd>();
+  @Output() closeTask = new EventEmitter<void>();
 
   enteredTitle: string = '';
 
@@ -20,15 +20,18 @@ export class NewTask {
 
   enteredDate: string | DateTime = '';
 
+  private readonly tasksService: TasksService = inject(TasksService);
+
   onCancel() {
-    this.cancelTask.emit();
+    this.closeTask.emit();
   }
 
   onSubmit() {
-    this.addTask.emit({
+    this.tasksService.addTask(this.userId, {
       title: this.enteredTitle,
       summary: this.enteredSummary,
       dueDate: DateTime.fromISO(this.enteredDate as string),
     });
+    this.closeTask.emit();
   }
 }
