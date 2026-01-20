@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Header } from './header/header';
+import { Header } from './task-app/header/header/header';
 import { User } from './user/user';
 import { DUMMY_USERS } from './user/dummy-users';
 import { Tasks } from './task-app/tasks/tasks';
