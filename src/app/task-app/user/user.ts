@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DUMMY_USERS } from './dummy-users';
 import { type UserInterface } from './user.model';
-import { Card } from '../task-app/shared/card/card';
+import { Card } from '../shared/card/card';
 
 @Component({
   selector: 'app-user',
