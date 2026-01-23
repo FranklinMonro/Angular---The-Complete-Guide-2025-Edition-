@@ -1,25 +1,9 @@
 
 <mat-tab-group>
   <mat-tab label="Task App"> 
-    <app-header />
-      <main>
-        <ul id="users">
-          @for (user of users; track user.id) {
-            <li>
-              <app-user 
-                [user]="user"
-                [selected]="selectedUser?.id === user.id"
-                (selectUser)="onSelectUser($event)" 
-                />
-            </li>
-          }
-        </ul>
-        @if(selectedUser) {
-          <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
-        } @else {
-          <p id="fallback">Select a user to see their tasks</p>
-        }
-      </main>
+    <task-app />
   </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Second">
+    <inv-app />
+  </mat-tab>
 </mat-tab-group>
