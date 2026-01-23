@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
 import { Header } from './task-app/header/header/header';
 import { User } from './task-app/user/user';
 import { DUMMY_USERS } from './task-app/user/dummy-users';
 import { Tasks } from './task-app/tasks/tasks';
-import {MatTabsModule} from '@angular/material/tabs';
+
 @Component({
   selector: 'app-root',
   imports: [Header, User, Tasks, MatTabsModule],
