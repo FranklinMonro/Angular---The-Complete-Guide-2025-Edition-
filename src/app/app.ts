@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './task-app/header/header/header';
-import { User } from './user/user';
-import { DUMMY_USERS } from './user/dummy-users';
+import { User } from './task-app/user/user';
+import { DUMMY_USERS } from './task-app/user/dummy-users';
 import { Tasks } from './task-app/tasks/tasks';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @Component({
   selector: 'app-root',
-  imports: [Header, User, Tasks],
+  imports: [Header, User, Tasks, MatTabsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
