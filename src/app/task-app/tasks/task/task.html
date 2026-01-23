@@ -1,4 +1,4 @@
-<app-card>
+<task-card>
   <article>
     <h2>{{ task.title }}</h2>
     <time>{{ task.dueDate.toISODate() |  date: 'fullDate' }}</time>
@@ -7,4 +7,4 @@
       <button (click)="onCompleteTask()">Complete</button>
     </p>
   </article>
-</app-card>
+</task-card>

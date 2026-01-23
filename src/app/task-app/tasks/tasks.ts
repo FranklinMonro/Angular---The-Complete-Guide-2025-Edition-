@@ -1,15 +1,15 @@
 import { Component, inject, Input } from '@angular/core';
-import { TaskComponent } from './task/task';
-import { NewTask } from './new-task/new-task';
+import { TaskNewTaskComponent } from './new-task/new-task';
 import { TasksService } from './tasks.service';
+import { TaskTaskComponent } from './task/task';
 
 @Component({
-  selector: 'app-tasks',
-  imports: [TaskComponent, NewTask],
+  selector: 'task-tasks',
+  imports: [TaskNewTaskComponent, TaskTaskComponent],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })
-export class Tasks {
+export class TaskTasksComponent {
   @Input({ required: true }) userId!: string;
 
   @Input({ required: true }) name!: string;

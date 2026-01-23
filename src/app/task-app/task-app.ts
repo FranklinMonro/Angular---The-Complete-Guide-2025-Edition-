@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Header } from './header/header';
-import { Tasks } from './tasks/tasks';
-import { User } from './user/user';
+import { TaskHeaderComponent } from './header/header';
+import { TaskTasksComponent } from './tasks/tasks';
+import { TaskUserComponent } from './user/user';
 import { DUMMY_USERS } from './user/dummy-users';
 
 @Component({
   selector: 'task-app',
-  imports: [Header, User, Tasks],
+  imports: [TaskHeaderComponent, TaskUserComponent, TaskTasksComponent],
   templateUrl: './task-app.html',
   styleUrl: './task-app.css',
 })

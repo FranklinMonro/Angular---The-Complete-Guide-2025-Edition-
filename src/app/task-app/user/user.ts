@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DUMMY_USERS } from './dummy-users';
 import { type UserInterface } from './user.model';
-import { Card } from '../shared/card/card';
+import { TaskCardComponent } from '../shared/card/card';
 
 @Component({
-  selector: 'app-user',
-  imports: [Card],
+  selector: 'task-user',
+  imports: [TaskCardComponent],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
-export class User {
+export class TaskUserComponent {
   @Input({ required: true }) user!: UserInterface;
 
   @Input({ required: true }) selected!: boolean;
