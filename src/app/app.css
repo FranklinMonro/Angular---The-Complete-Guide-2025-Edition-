@@ -1,0 +1,9 @@
+/* Using ::ng-deep to "pierce" the component encapsulation */
+.white-tabs ::ng-deep .mdc-tab__text-label {
+  color: white !important;
+}
+
+/* 2. Active state: Bright Blue label */
+.white-tabs ::ng-deep .mdc-tab--active .mdc-tab__text-label {
+  color: #00d2ff !important; /* Adjust this hex code to your preferred bright blue */
+}
