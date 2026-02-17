@@ -1,44 +1,18 @@
 import { Component } from '@angular/core';
+import { SupHeaderComponent } from './sup-header/sup-header';
+import { DashboardServerStatusComponent } from './sup-dashboard/dashboard-server-status/dashboard-server-status';
+import { DashboardTrafficComponent } from './sup-dashboard/dashboard-traffic/dashboard-traffic';
+import { DashboardTicketsComponent } from './sup-dashboard/dashboard-tickets/dashboard-tickets';
 
 @Component({
   selector: 'sup-app',
-  imports: [],
+  imports: [
+    SupHeaderComponent,
+    DashboardServerStatusComponent,
+    DashboardTrafficComponent,
+    DashboardTicketsComponent,
+  ],
   templateUrl: './sup-app.html',
   styleUrl: './sup-app.css',
 })
-export class SupAppComponent {
-  dummyTrafficData = [
-    {
-      id: 'd1',
-      value: 433,
-    },
-    {
-      id: 'd2',
-      value: 260,
-    },
-    {
-      id: 'd3',
-      value: 290,
-    },
-    {
-      id: 'd4',
-      value: 410,
-    },
-    {
-      id: 'd5',
-      value: 397,
-    },
-    {
-      id: 'd6',
-      value: 488,
-    },
-    {
-      id: 'd47',
-      value: 589,
-    },
-  ];
-
-  maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-
-  currentStatus = 'online';
-}
+export class SupAppComponent {}
