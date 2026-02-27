@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardServerStatus } from './server-status';
+import { DashboardTraffic } from './item-traffic';
 
-describe('DashboardServerStatus', () => {
-  let component: DashboardServerStatus;
-  let fixture: ComponentFixture<DashboardServerStatus>;
+describe('DashboardTraffic', () => {
+  let component: DashboardTraffic;
+  let fixture: ComponentFixture<DashboardTraffic>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DashboardServerStatus]
+      imports: [DashboardTraffic]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DashboardServerStatus);
+    fixture = TestBed.createComponent(DashboardTraffic);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

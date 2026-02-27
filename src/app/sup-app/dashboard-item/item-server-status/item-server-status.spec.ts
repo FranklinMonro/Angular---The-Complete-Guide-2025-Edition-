@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardTicketsComponent } from './tickets';
+import { ItemServerStatusComponent } from './item-server-status';
 
-describe('DashboardTicketsComponent', () => {
-  let component: DashboardTicketsComponent;
-  let fixture: ComponentFixture<DashboardTicketsComponent>;
+describe('ItemServerStatusComponent', () => {
+  let component: ItemServerStatusComponent;
+  let fixture: ComponentFixture<ItemServerStatusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DashboardTicketsComponent]
+      imports: [ItemServerStatusComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DashboardTicketsComponent);
+    fixture = TestBed.createComponent(ItemServerStatusComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

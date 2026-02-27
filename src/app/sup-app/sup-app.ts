@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { SupHeaderComponent } from './sup-header/sup-header';
-import { ServerStatusComponent } from './dashboard-item/server-status/server-status';
-import { TrafficComponent } from './dashboard-item/traffic/traffic';
-import { TicketsComponent } from './dashboard-item/tickets/tickets';
+import { ItemServerStatusComponent } from './dashboard-item/item-server-status/item-server-status';
+import { ItemTrafficComponent } from './dashboard-item/item-traffic/item-traffic';
+import { ItemTicketsComponent } from './dashboard-item/item-tickets/item-tickets';
 import { DashboardItemComponent } from './dashboard-item/dashboard-item';
 
 @Component({
@@ -10,9 +10,9 @@ import { DashboardItemComponent } from './dashboard-item/dashboard-item';
   imports: [
     SupHeaderComponent,
     DashboardItemComponent,
-    ServerStatusComponent,
-    TrafficComponent,
-    TicketsComponent,
+    ItemServerStatusComponent,
+    ItemTrafficComponent,
+    ItemTicketsComponent,
   ],
   templateUrl: './sup-app.html',
   styleUrl: './sup-app.css',
