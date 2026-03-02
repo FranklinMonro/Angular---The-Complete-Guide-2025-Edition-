@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SharedButtonComponent } from '../shared/button/button';
 
 @Component({
   selector: 'sup-header',
-  imports: [],
+  imports: [SharedButtonComponent],
   templateUrl: './sup-header.html',
   styleUrl: './sup-header.css',
 })
