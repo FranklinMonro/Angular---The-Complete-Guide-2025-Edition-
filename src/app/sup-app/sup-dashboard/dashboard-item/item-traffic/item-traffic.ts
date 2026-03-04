@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'item-traffic',
   imports: [],
   templateUrl: './item-traffic.html',
-  styleUrls: ['../../sup-app.css', './item-traffic.css'],
+  styleUrls: ['../../../sup-app.css', './item-traffic.css'],
 })
 export class ItemTrafficComponent {
   dummyTrafficData = [
