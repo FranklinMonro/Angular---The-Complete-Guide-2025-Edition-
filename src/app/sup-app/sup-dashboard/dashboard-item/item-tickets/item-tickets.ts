@@ -5,6 +5,6 @@ import { NewTicketComponent } from './new-ticket/new-ticket';
   selector: 'item-tickets',
   imports: [NewTicketComponent],
   templateUrl: './item-tickets.html',
-  styleUrls: ['../../../sup-app.css', './item-tickets.css'],
+  styleUrls: ['./item-tickets.css'],
 })
 export class ItemTicketsComponent {}

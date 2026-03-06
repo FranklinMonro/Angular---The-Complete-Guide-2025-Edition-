@@ -6,6 +6,6 @@ import { ControlComponent } from '../../../../shared/control/control';
   selector: 'new-ticket',
   imports: [SharedButtonComponent, ControlComponent],
   templateUrl: './new-ticket.html',
-  styleUrls: ['../../../../sup-app.css', './new-ticket.css'],
+  styleUrls: ['./new-ticket.css'],
 })
 export class NewTicketComponent {}
